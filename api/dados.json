@@ -1,0 +1,13 @@
+
+        {
+          "requisicao": "cadastrar",
+          "nome": "Marconys" ,
+          "cpf":"12541785621",
+          "telefone":"115682354789",
+          "cnpj":"12352654741254",
+          "rsocial":"Teste",
+          "id_tipo_cliente":1,
+          "email":"nãotem@nãotem.com.br",
+          "senha":"65423"
+        }
+    

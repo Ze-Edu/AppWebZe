@@ -1,0 +1,40 @@
+
+/* Background */
+.backgv {  
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  /* mapa footer */
+  .mapa{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mapa #mapa{
+    width: 500px;
+    height: 200px;
+  }
+
+  /* contato footer */
+
+  .contato{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Classes para a implementação de função js para mostrar e esconder div*/
+  .esconder{
+    display: none;
+}
+
+.mostrar{
+    display: block;
+}
