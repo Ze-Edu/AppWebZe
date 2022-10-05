@@ -26,8 +26,8 @@
             <div class="alert bg-warning bg-opacity-75 "><h4>Chamados</h4></div>
 
             <div class="">
-              <a href=""><button type="button" class="btn btn-info">Novo Chamado</button></a> 
-              <a href=""><button type="button" class="btn btn-info">Meus Chamados</button></a>             
+              <a href="novo_chamado_cliente.php"><button type="button" class="btn btn-info">Novo Chamado</button></a> 
+              <a href="lista_chamado_cliente.php"><button type="button" class="btn btn-info">Meus Chamados</button></a>             
             </div>
           </div>          
           <!-- Fim botão Principal chamados -->
@@ -38,8 +38,8 @@
             <div class="alert bg-success bg-opacity-75 "><h4>Hardware Solidário</h4></div>
 
             <div class="">
-              <a href=""><button type="button" class="btn btn-info">Novo Descarte</button></a> 
-              <a href=""><button type="button" class="btn btn-info">Meus Descartes</button></a>             
+              <a href="novo_descrate_cliente.php"><button type="button" class="btn btn-info">Novo Descarte</button></a> 
+              <a href="lista_descarte_cliente.php"><button type="button" class="btn btn-info">Meus Descartes</button></a>             
             </div>
           </div>          
           <!-- Fim botão Principal Hardware solidário -->
@@ -50,8 +50,8 @@
             <div class="alert bg-primary bg-opacity-75 "><h4>Planos</h4></div>
 
             <div class="">
-              <a href=""><button type="button" class="btn btn-info">Novo Plano</button></a> 
-              <a href=""><button type="button" class="btn btn-info">Meu Plano</button></a>             
+              <a href="novo_plano_cliente.php"><button type="button" class="btn btn-info">Novo Plano</button></a> 
+              <a href="meu_plano.php"><button type="button" class="btn btn-info">Meu Plano</button></a>             
             </div>
           </div>          
           <!-- Fim botão Principal planos  -->

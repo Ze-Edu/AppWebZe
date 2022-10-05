@@ -92,7 +92,8 @@ data_abertura_chamado datetime default current_timestamp,
 data_finalizcao_chamado datetime default current_timestamp,
 data_limite_chamado date,
 foto_erro_chamado varchar(60) null,
-status_chamado varchar(20) null
+status_chamado varchar(20) null,
+prioridade_chamado varchar(20) null
 
 )engine = innoDB default charset = UTF8;
 
