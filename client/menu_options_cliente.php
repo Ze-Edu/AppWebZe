@@ -15,8 +15,10 @@
 </head>
 <body>
 
-<main class="container text-dark p-4 rounded my-4 pt-5">
-    <h1 class="pt-5">BOOOORAAAAAAA BIL!</h1>
+<main class="container pt-5">
+<div class="alert alert-primary text-center mt-5 p-2 rounded-pill" role="alert">
+      <h1 class="">Minha Área</h1>
+    </div>
         <!-- Inicio row -->
         <div class="row">
           <!-- Inicio botão Principal chamados -->
