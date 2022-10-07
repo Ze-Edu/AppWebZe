@@ -228,9 +228,9 @@
       <div id="social" class="container bg-secondary rounded">        
         <div class=" container">
           <h1>Hardware Solidário</h1>
-          <a href="pages/social.html">
+          <a href="pages/social.php">
             <img src="img/solidario.jpg" alt="" class="d-block w-100 img-fluid mb-3 rounded">
-            <button class="btn btn-info mb-3">Saiba Mais...</button></a>
+            <button class=" btn btn-info mb-3">Saiba Mais...</button></a>
         </div>
       </div>
       <!-- Fim Social -->

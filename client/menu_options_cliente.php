@@ -16,7 +16,7 @@
 <body>
 
 <main class="container pt-5">
-<div class="alert alert-primary text-center mt-5 p-2 rounded-pill" role="alert">
+<div class="alert alert-primary text-center mt-5 p-2 rounded" role="alert">
       <h1 class="">Minha Área</h1>
     </div>
         <!-- Inicio row -->

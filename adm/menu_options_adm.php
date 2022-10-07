@@ -13,7 +13,7 @@
 <body>
     <main class="container pt-5">
         
-        <div class="alert alert-success text-center mt-5 p-2 rounded-pill" role="alert">
+        <div class="alert alert-success text-center mt-5 p-2 rounded" role="alert">
             <h1 class="">Área administrativa</h1>
         </div>
         <!-- Inicio row -->
