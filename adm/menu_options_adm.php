@@ -19,8 +19,9 @@
         <!-- Inicio row -->
         <div class="row">
             <!-- Inicio botão Principal chamados -->
-            <div class="alert bg-warning text-center bg-opacity-75 col">
-                <div class="alert bg-light mx-2 text-center bg-opacity-75 col ">
+            <div class="alert bg-warning text-center bg-opacity-75 col-3">
+                <img clas="mb-2" src="../img/administrative_tools_15497.png" alt="">                
+                <div class="alert bg-light text-center bg-opacity-75">
                     <h4>Chamados</h4>
                 </div>
                 <div class="">
@@ -29,7 +30,8 @@
             </div>
             <!-- Fim botão Principal chamados -->
             <!-- Inicio botão Principal Hardware solidário -->
-            <div class="alert bg-danger mx-2 text-center bg-opacity-75 col ">
+            <div class="alert bg-danger text-center bg-opacity-75 col-3 ">
+                <img src="../img/Motherboard_icon-icons.com_55228.png" alt="">
                 <div class="alert bg-light bg-opacity-75 ">
                     <h4>Hard Solidário</h4>
                 </div>
@@ -39,7 +41,8 @@
             </div>
             <!-- Fim botão Principal Hardware solidário -->
             <!-- Inicio botão Principal planos -->
-            <div class="alert bg-secondary mx-2 text-center bg-opacity-75 col ">
+            <div class="alert bg-secondary text-center bg-opacity-75 col-3 ">
+                <img src="../img/add-bag-basket-cart-ecommerce-shopping-store_107529.png" alt="">
                 <div class="alert bg-light bg-opacity-75 ">
                     <h4>Planos</h4>
                 </div>
@@ -49,12 +52,13 @@
             </div>
             <!-- Fim botão Principal planos  -->
             <!-- Inicio botão Principal planos -->
-            <div class="alert bg-success mx-2 text-center bg-opacity-75 col ">
+            <div class="alert bg-success text-center bg-opacity-75 col-3">
+                <img src="../img/admin_user_man_22187.png" alt="">
                 <div class="alert bg-light bg-opacity-75 ">
-                    <h4>Clientes</h4>
+                    <h4>Usuários</h4>
                 </div>
                 <div class="">
-                    <a href="#"><button type="button" class="btn btn-light">Lista Clientes</button></a>
+                    <a href="#"><button type="button" class="btn btn-light">Lista Usuários</button></a>
                 </div>
             </div>
             <!-- Fim botão Principal planos  -->
