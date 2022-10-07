@@ -58,7 +58,7 @@
                     <h4>Usuários</h4>
                 </div>
                 <div class="">
-                    <a href="#"><button type="button" class="btn btn-light">Lista Usuários</button></a>
+                    <a href="listar_usuarios.php"><button type="button" class="btn btn-light">Lista Usuários</button></a>
                 </div>
             </div>
             <!-- Fim botão Principal planos  -->
