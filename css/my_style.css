@@ -38,3 +38,8 @@
 .mostrar{
     display: block;
 }
+
+/* sessão usuário */
+.largButton{
+  width: 150px;     
+}
