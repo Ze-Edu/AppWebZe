@@ -81,7 +81,7 @@ descri_chamado varchar(255) not null,
 titulo_chamado varchar(32) not null,
 id_cliente_chamado int(11) not null,
 data_abertura_chamado datetime default current_timestamp,
-data_finalizacao_chamado datetime default current_timestamp,
+data_finalizacao_chamado datetime null,
 data_limite_chamado date,
 foto_erro_chamado varchar(60) null,
 status_chamado varchar(20) null,
@@ -161,7 +161,6 @@ CREATE PROCEDURE `sp_chamado_insert`(
 `:titulo` varchar(32),
 `:id_cliente` int(11),
 `:data_abertura` datetime,
-`:data_finalizacao` datetime,
 `:data_limite` date,
 `:foto_erro` varchar(60),
 `:status` varchar(20),
@@ -169,8 +168,8 @@ CREATE PROCEDURE `sp_chamado_insert`(
 `:local_atend` varchar(30)
 )
 BEGIN
-insert into tbchamados (protocolo_chamado, descri_chamado, titulo_chamado, id_cliente_chamado, data_abertura_chamado, data_finalizacao_chamado, data_limite_chamado, foto_erro_chamado, status_chamado, prioridade_chamado, local_atend_chamado)
-values (`:protocolo`, `:descricao`, `:titulo`, `:id_cliente`, `:data_abertura`,`:data_finalizacao`,`:data_limite`,`:foto_erro`,`:status`,`:prioridade`,`:local_atend`);
+insert into tbchamados (protocolo_chamado, descri_chamado, titulo_chamado, id_cliente_chamado, data_abertura_chamado, data_limite_chamado, foto_erro_chamado, status_chamado, prioridade_chamado, local_atend_chamado)
+values (`:protocolo`, `:descricao`, `:titulo`, `:id_cliente`, `:data_abertura`,`:data_limite`,`:foto_erro`,`:status`,`:prioridade`,`:local_atend`);
 select * from tbchamados where id_chamado = (select @@identity);
 END
 |
