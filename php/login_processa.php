@@ -9,7 +9,7 @@ if ($_POST) {
     $senha_usuario = $_POST['senha'];
 
 
-    $verificaUser = "SELECT * FROM tbusuarios WHERE login_usuario = '$login_usuario' and senha_usuario = '$senha_usuario'";
+    $verificaUser = "SELECT * FROM tbusuarios WHERE login_usuario = '$login_usuario'";
     //Prepara a query e atribui a variável $result_session
     $result_session = $conn->prepare($verificaUser);
     //Executa a query
@@ -22,9 +22,11 @@ if ($_POST) {
         session_start();
         $session_name_new = session_name(); // recupera o nome atual
     }
-    if ($row != null) {
+    if ($row != null && password_verify($senha_usuario, $row['senha_usuario'])) {
         $_SESSION['login'] = $login_usuario;
         $_SESSION['nivel_usuario'] = $row['nivel_usuario'];
+        $_SESSION['id_nivel_usuario'] = $row['id_nivel_usuario'];
+        $_SESSION['id_usuario'] = $row['id_usuario'];
         $_SESSION['session_name'] = session_name();
         echo "<script>window.open('../adm/index.php','_self')</script>";
 
@@ -54,7 +56,7 @@ if ($_POST) {
             $_SESSION['login'] = $login_cliente;
             $_SESSION['id_tipo_cliente'] = $row['id_tipo_cliente'];
             $_SESSION['id_cliente'] = $row['id_cliente'];
-            $_SESSION['session_name'] = session_name();            
+            $_SESSION['session_name'] = session_name();
             echo "<script>window.open('../client/index.php','_self')</script>";
         } else {
             echo "<script>window.open('invasor.php','_self')</script>";

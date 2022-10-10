@@ -13,15 +13,6 @@ senha_usuario varchar(255) not null,
 foto_usuario varchar(60) default null
 )engine = innoDB default charset = UTF8;
 
--- Inserindo dados na tbusuarios
-
-insert into tbusuarios(id_usuario, nome_usuario, email_usuario, id_nivel_usuario, login_usuario, senha_usuario, foto_usuario)
-values(1, 'Marconys Pinheiro de Moura', 'mpmoura@tecnoo.com.br', 1, 'mpmoura', '1234', ''),
-(2, 'Fabricio Costa Monteiro', 'fbmonteiro@tecnoo.com.br', 2, 'fbmonteiro', '1234', ''),
-(3, 'Vinicius Maximo Lima', 'vmlima@tecnoo.com.br', 3, 'vmlima', '1234', ''),
-(4, 'Jose Eduardo Qeiros Santos', 'jeqsantos@tecnoo.com.br', 3, 'jeqsantos', '1234', ''),
-(5, 'Elias Vieira de Souza', 'evsouza@tecnoo.com.br', 2, 'evsouza', '1234', '');
-
 -- estrutura da tabela cliente
 create table tbnivel(
 id_nivel int(11) primary key auto_increment not null,
@@ -31,7 +22,7 @@ nome_nivel varchar(20) not null
 -- Inserindo dados da tabela tbnivel
 
 insert into tbnivel (id_nivel, nome_nivel) 
-values (1,'Supervisor'),(2,'TécnicoII'),(3,'TécnicoI'),(4,'Desligado');
+values (1,'Supervisor'),(2,'Tecnico II'),(3,'Tecnico I'),(4,'Desligado');
 
 -- estrutura da tabela cliente
 

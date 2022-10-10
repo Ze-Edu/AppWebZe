@@ -1,4 +1,5 @@
     <?php
+    session_start();
     //inclui conexão com o banco de dados
     include('../connection/conn.php');
     //Inclui variável de ambiente
@@ -48,7 +49,7 @@
         <main class="container pt-5">
 
             <div class="alert alert-success mt-5 p-2 rounded" role="alert">
-                <h1><span><i class="bi bi-person-lines-fill"></i>  Usuários</span></h1>
+                <h1><span><i class="bi bi-person-lines-fill"></i> Usuários</span></h1>
             </div>
             <!-- Início da tabela -->
             <table class="table table-dark table-hover">
@@ -103,6 +104,19 @@
                             <!-- Fim Login -->
                             <!-- Início Nível -->
                             <td>
+                                <?php 
+                                if ($row['nome_nivel'] == 'Supervisor') {
+                                    echo ("<span><i class='bi bi-briefcase-fill'></i></span>");
+
+                                }else if($row['nome_nivel'] == 'Tecnico I'){
+                                    echo ("<span><i class='bi bi-headset'></i></span>");
+
+                                }else if($row['nome_nivel'] == 'Tecnico II'){
+                                    echo ("<span><i class='bi bi-screwdriver'></i></span>");
+                                }else{
+                                    echo ("<span><i class='text-danger bi bi-person-x-fill'></i></span>");
+                                }
+                                ?>
                                 <?php echo $row['nome_nivel']; ?>
                             </td>
                             <!-- Início Nível -->
@@ -114,9 +128,7 @@
                                 </a>
                                 <!-- Fim botão alterar -->
                                 <!-- Início botão excluir -->
-                                <button class="btn btn-danger largButton delete mt-2" role="button" data-nome="<?php echo $row['nome_usuario'];?>" 
-                                data-id="<?php echo $row['id_usuario']; ?>"
-                                data-bs-toggle="modal" data-bs-target="#myModal">
+                                <button class="btn btn-danger largButton delete mt-2" role="button" data-nome="<?php echo $row['nome_usuario']; ?>" data-id="<?php echo $row['id_usuario']; ?>" data-bs-toggle="modal" data-bs-target="#myModal">
                                     <span class=""><i class="bi bi-trash-fill"></i>Excluir</span>
 
 
@@ -134,23 +146,23 @@
 
         <!-- Início Modal -->
         <div id="myModal" class="modal fade" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title text-danger">Atenção!</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-danger">Atenção!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Deseja realmente <strong> Desligar </strong> o usuário?</p>
+                        <h3><span class="text-danger nome"></span></h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
+                        <a href="#" type="button" class="btn btn-danger delete-yes">Confirmar</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            <p>Deseja realmente <strong> Desligar </strong> o usuário?</p>
-            <h3><span class="text-danger nome"></span></h3>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-danger delete-yes">Confirmar</button>
-        </div>
-        </div>
-    </div>
-    </div>
         <!-- Fim Modal -->
 
 
@@ -164,7 +176,7 @@
 
         <!-- Script para o modal -->
         <script type="text/javascript">
-            $('.delete').on('click', function(){
+            $('.delete').on('click', function() {
                 //Busca o valor do atributo data-nome
                 var nome = $(this).data('nome');
                 //Busca o valor do atributo data-id
@@ -172,7 +184,7 @@
                 //Insere o nome do item na confirmação do modal
                 $('span.nome').text(nome);
                 //Envia o id através do link do butão confirmar
-                $('a.delete-yes').attr('href', 'usuario_excluir.php?id_usuario='+id);
+                $('a.delete-yes').attr('href', 'excluir_usuario.php?id_usuario =' + id);
                 //Abre o Modal
                 $('#myModal').modal('show');
 
