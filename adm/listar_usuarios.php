@@ -185,6 +185,7 @@
                 $('span.nome').text(nome);
                 //Envia o id através do link do butão confirmar
                 $('a.delete-yes').attr('href', 'excluir_usuario.php?id_usuario =' + id);
+                console.log(id);
                 //Abre o Modal
                 $('#myModal').modal('show');
 

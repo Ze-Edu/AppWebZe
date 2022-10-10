@@ -21,9 +21,11 @@ if ($_POST) {
 
         //verifica e coverte a extensão se maiúsculo para minúsculo
         $extensao = strtolower(pathinfo($nome_img, PATHINFO_EXTENSION));
+
+        $novoNomeImgExtensao = $novoNomeImg . "." . $extensao;
         
         //move o arquivo para a pasta do servidor
-        move_uploaded_file($img_usuario['tmp_name'], $pasta_img . $novoNomeImg . "." . $extensao);
+        move_uploaded_file($img_usuario['tmp_name'], $pasta_img . $novoNomeImgExtensao);
     }
 
 
@@ -51,7 +53,7 @@ if ($_POST) {
     $cad_usuario->bindParam(':email_usuario', $dados['email_usuario'], PDO::PARAM_STR);
     $cad_usuario->bindParam(':login_usuario', $dados['login_usuario'], PDO::PARAM_STR);
     $cad_usuario->bindParam(':senha_usuario', $hash, PDO::PARAM_STR);
-    $cad_usuario->bindParam(':foto_usuario', $novoNomeImg, PDO::PARAM_STR);
+    $cad_usuario->bindParam(':foto_usuario', $novoNomeImgExtensao, PDO::PARAM_STR);
 
     $cad_usuario->execute();
 

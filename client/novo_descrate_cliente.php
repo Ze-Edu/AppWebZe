@@ -30,12 +30,12 @@
         </div>
 
         <div class="col-md-6 offset-md-3">
-            <form action="novo_descarte_cliente.php" method="post" enctype="multipart/form-data">
-                <div class=" form-control  bg-secondary">
-                    <div class="form-group">
+            <form class="form-control alert alert-success" action="novo_descarte_cliente.php" method="post" enctype="multipart/form-data">
+                <div class=" form-control form-group  bg-secondary">
+                    <!-- input -->
                         <label class="h5" for="nome-hardware">Qual Hardware deseja descartar?</label>
                         <input type="text" class="form-control" name="nome-hardware" id="nome-hardware" maxlength="30">
-                    </div>
+                    
 
                     <div class="form-group">
                     <label class="h5 mt-2" for="nome-hardware">Qual o atual estado desse hardware?</label><br>

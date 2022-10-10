@@ -1,6 +1,7 @@
 <?php
 //Inicia conexão com o banco de dados
 include('../connection/conn.php');
+
 // inicia verificação do login do usuário adm
 if ($_POST) {
 
@@ -58,6 +59,9 @@ if ($_POST) {
             $_SESSION['id_cliente'] = $row['id_cliente'];
             $_SESSION['session_name'] = session_name();
             echo "<script>window.open('../client/index.php','_self')</script>";
+            
+        
+
         } else {
             echo "<script>window.open('invasor.php','_self')</script>";
         }

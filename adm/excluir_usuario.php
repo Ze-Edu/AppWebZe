@@ -11,7 +11,7 @@ $id_user = filter_input(INPUT_GET, "id_usuario", FILTER_SANITIZE_NUMBER_INT);
 //QUERY para deletar usuários com força bruta tei tei
 $query_usuarios = "DELETE FROM tbusuarios WHERE id_usuario = :id";
 $del_usuarios = $conn->prepare($query_usuarios);
-$del_usuarios->bindParam(':id', $id_user);
+$del_usuarios->bindParam(':id', $id_user, PDO::PARAM_INT);
 
 if($del_usuarios->execute()){
     header("location: msg_alert_usuario.php");

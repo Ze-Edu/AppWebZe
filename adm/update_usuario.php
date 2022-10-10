@@ -22,8 +22,11 @@ if ($_POST) {
         //verifica e coverte a extensão se maiúsculo para minúsculo
         $extensao = strtolower(pathinfo($nome_img, PATHINFO_EXTENSION));
         
+        //Gera nome com .extensão para gravar no banco
+        $novoNomeImgExtensao = $novoNomeImg . "." . $extensao;
+        
         //move o arquivo para a pasta do servidor
-        move_uploaded_file($img_usuario['tmp_name'], $pasta_img . $novoNomeImg . "." . $extensao);
+        move_uploaded_file($img_usuario['tmp_name'], $pasta_img . $novoNomeImgExtensao);
     }
 
     //Campo do form para filtar o registro
@@ -43,7 +46,7 @@ if ($_POST) {
     $edit_usuario->bindParam(':email_usuario', $dados['email_usuario'], PDO::PARAM_STR);
     $edit_usuario->bindParam(':login_usuario', $dados['login_usuario'], PDO::PARAM_STR);
     $edit_usuario->bindParam(':senha_usuario', $hash, PDO::PARAM_STR);
-    $edit_usuario->bindParam(':foto_usuario', $novoNomeImg, PDO::PARAM_STR);
+    $edit_usuario->bindParam(':foto_usuario', $novoNomeImgExtensao, PDO::PARAM_STR);
     $edit_usuario->bindParam(':id_usuario', $id_filtro, PDO::PARAM_INT);
 
 

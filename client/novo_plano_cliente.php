@@ -28,8 +28,8 @@
         </div>
 
         <div class="col-md-6 offset-md-3">
-            <form action="novo_chamado_cliente.php" method="post" enctype="multipart/form-data">
-                <div class=" form-control  bg-secondary">
+            <form class="form-control alert alert-success" action="novo_chamado_cliente.php" method="post" enctype="multipart/form-data">
+                <div class=" form-control form-group  bg-secondary">
                     <div class="form-group">
                         <label class="h5" for="nome-hardware">Títular do Cartão:</label>
                         <input type="text" class="form-control" name="titulo" id="titulo" maxlength="30">

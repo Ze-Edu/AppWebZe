@@ -10,7 +10,7 @@ session_start();
 // identifica o usuário
 if(!isset($_SESSION['login'])){
 // se não exixtir, destruímos a sessão por segurança
-header("location: ../pages/login.php");
+header("location: login_processa.php");
 exit;
 }
 
@@ -19,7 +19,7 @@ $name_of_session = session_name();
 if(!isset($_SESSION['name_of_session']) OR ($_SESSION['name_of_session']!=$name_of_session)){
 // se não existir, destruímos a sessão por segurança
 session_destroy();
-header("location: ../pages/login.php");
+header("location: login_processa.php");
 exit;
 }
 
@@ -27,7 +27,7 @@ exit;
 if(!isset($_SESSION['login'])){
 // se não existir, destruímos a sessão por segurança
 session_destroy();
-header("location: ../pages/login.php");
+header("location: login_processa.php");
 exit;
 }
 ?>
