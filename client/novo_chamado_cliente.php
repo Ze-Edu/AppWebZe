@@ -12,10 +12,13 @@ $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 //busca o id do cliente logado
 $id_logado = $_SESSION['id_cliente'];
 
+//Define um fuso horário padrão
+date_default_timezone_set('America/Sao_Paulo');
 //captura a data atual com um fuso horário padrão
-$date = new DateTime();
+$date = new DateTime(); //data agora
 $date->setTimezone(new DateTimeZone('America/Sao_Paulo'));
-$data_hora = $date->format("Y-m-d h:i:s");
+$data_hora = $date->format("Y-m-d h:i:s"); //data agora formatado
+
 
 if ($_POST) {
 
@@ -38,11 +41,59 @@ if ($_POST) {
     }
 
     //QUERY PARA INSERIR NOVO CHAMADO
-    $query_chamados = "INSERT INTO tbchamados (titulo_chamado, prioridade_chamado, descri_chamado, data_abertura_chamado, local_atend_chamado, foto_erro_chamado, protocolo_chamado, id_cliente_chamado, data_limite_chamado) 
-    VALUES(:titulo_chamado, :prioridade_chamado, :descri_chamado, :data_abertura_chamado, :local_atend_chamado, :foto_erro_chamado, :protocolo_chamado, :id_cliente_chamado, :data_limite_chamado)";
-
-
+    $query_chamados = "INSERT INTO tbchamados (titulo_chamado, prioridade_chamado, descri_chamado, data_abertura_chamado, local_atend_chamado, foto_erro_chamado, protocolo_chamado, id_cliente_chamado, data_limite_chamado, status_chamado) 
+    VALUES(:titulo_chamado, :prioridade_chamado, :descri_chamado, :data_abertura_chamado, :local_atend_chamado, :foto_erro_chamado, :protocolo_chamado, :id_cliente_chamado, :data_limite_chamado, :status_chamado)";
+    
     $cad_chamados = $conn->prepare($query_chamados);
+
+    //Verifica tipo de atendimento e atribui valor ao status_chamado
+    if ($dados['local_atend_chamado'] == "Presencial") {
+        $status = "Aguardando visita";        
+        $data_limite = date('Y-m-d H:i:s', strtotime(' + 3 hours'));
+
+    }else if($dados['local_atend_chamado'] == "Remoto"){
+        $status = "Aguardando contato";
+        $data_limite = date('Y-m-d H:i:s', strtotime(' + 2 hours'));
+    }else{
+        $status = "Aguardando equipamento";
+        $data_limite = date('Y-m-d H:i:s', strtotime(' + 72 hours'));
+    }
+
+    //Verifica o atual estado do equipamento e atribui valor ao prioridade_chamado
+    if ($dados['prioridade_chamado'] == "baixa") {
+        $prioridade = "Baixa";
+
+    }else if($dados['prioridade_chamado'] == "media"){
+        $prioridade = "Media";
+    }else{
+        $prioridade = "Alta";   
+     }
+
+     $protocolo = uniqid();
+
+    $cad_chamados->bindParam(':titulo_chamado', $dados['titulo_chamado'], PDO::PARAM_STR);
+    $cad_chamados->bindParam(':prioridade_chamado', $prioridade, PDO::PARAM_STR);
+    $cad_chamados->bindParam(':descri_chamado', $dados['descri_chamado'], PDO::PARAM_STR);
+    $cad_chamados->bindParam(':data_abertura_chamado', $data_hora, PDO::PARAM_STR);
+    $cad_chamados->bindParam(':local_atend_chamado', $dados['local_atend_chamado'], PDO::PARAM_STR);
+    $cad_chamados->bindParam(':foto_erro_chamado', $novoNomeImgExtensao, PDO::PARAM_STR);
+    $cad_chamados->bindParam(':protocolo_chamado', $protocolo, PDO::PARAM_STR);
+    $cad_chamados->bindParam(':id_cliente_chamado', $id_logado, PDO::PARAM_INT);
+    $cad_chamados->bindParam(':data_limite_chamado', $data_limite, PDO::PARAM_STR);
+    $cad_chamados->bindParam(':status_chamado', $status, PDO::PARAM_STR);
+
+    $cad_chamados->execute();
+
+    if ($conn->lastInsertId()) {
+        header("location: msg_alert_cliente.php");
+        //Cria variável global para salvar a menssagem de sucesso
+        $_SESSION['msg'] = "<p style='color:green;'>Tudo Certo!!<br>Chamado cadastrado com sucesso!</P> ";
+    } else {
+        //Cria variável global para salvar a menssagem de erro
+        $_SESSION['msg'] = "<p style='color:#f00;'> Erro: Ops!! Erro ao abrir chamado!</p>";
+
+        header("location: msg_alert_cliente.php");
+    }
 
 
 
@@ -98,15 +149,15 @@ if ($_POST) {
                     <div class="form-group">
                         <label class="h5 mt-2" for="prioridade_chamado">Qual o atual estado do seu equipamento?</label><br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="prioridade_chamado" id="prioridade_chamado" value="Baixa Prioridade">
+                            <input class="form-check-input" type="radio" name="prioridade_chamado" id="prioridade_chamado" value="baixa">
                             <label class="form-check-label" for="estado-hardware">Funcionando</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="prioridade_chamado" id="prioridade_chamado" value="Média Prioridade">
+                            <input class="form-check-input" type="radio" name="prioridade_chamado" id="prioridade_chamado" value="media">
                             <label class="form-check-label" for="estado-hardware">Funcionando Parcialmente</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="prioridade_chamado" id="prioridade_chamado" value="Alta Prioridade">
+                            <input class="form-check-input" type="radio" name="prioridade_chamado" id="prioridade_chamado" value="alta">
                             <label class="form-check-label" for="estado-hardware">Não funciona</label>
                         </div>
                     </div>

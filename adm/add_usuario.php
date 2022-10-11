@@ -57,8 +57,6 @@ if ($_POST) {
 
     $cad_usuario->execute();
 
-    var_dump($dados);
-
     if ($conn->lastInsertId()) {
         header("location: msg_alert_usuario.php");
         //Cria variável global para salvar a menssagem de sucesso
