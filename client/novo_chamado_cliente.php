@@ -1,20 +1,21 @@
 
 <?php 
 session_start();
-//inclui acesso
-// include('../../php/acesso.php');
 //inclui conexão com o banco de dados
-include('../../connection/conn.php');
+include('../connection/conn.php');
 //Inclui variável de ambiente
-include('../../php/config_global.php');
+include('../php/config_global.php');
 
 //Atribui os campos recebidos a variável $dados
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-$json = json_encode($_SESSION);
-echo $json; 
 
-// $id = $_SESSION['id_cliente'];
-// echo $id;
+//busca o id do cliente logado
+$id_logado = $_SESSION['id_cliente'];
+
+//captura a data atual com um fuso horário padrão
+$date = new DateTime();
+$date->setTimezone(new DateTimeZone('America/Sao_Paulo'));
+$data_hora = $date->format("Y-m-d h:i:s");
 
 if ($_POST) {
 
@@ -39,6 +40,7 @@ if ($_POST) {
     //QUERY PARA INSERIR NOVO CHAMADO
     $query_chamados = "INSERT INTO tbchamados (titulo_chamado, prioridade_chamado, descri_chamado, data_abertura_chamado, local_atend_chamado, foto_erro_chamado, protocolo_chamado, id_cliente_chamado, data_limite_chamado) 
     VALUES(:titulo_chamado, :prioridade_chamado, :descri_chamado, :data_abertura_chamado, :local_atend_chamado, :foto_erro_chamado, :protocolo_chamado, :id_cliente_chamado, :data_limite_chamado)";
+
 
     $cad_chamados = $conn->prepare($query_chamados);
 
@@ -77,7 +79,7 @@ if ($_POST) {
     <main class="contaimer">
 
         <div class="container alert alert-primary p-4 rounded my-4">
-            <a href="../index.php" class="text-decoration-none">
+            <a href="index.php" class="text-decoration-none">
                 <h1 class="text-dark">
                 <i class="bi bi-arrow-left-square-fill"></i>
                     Novo Chamado

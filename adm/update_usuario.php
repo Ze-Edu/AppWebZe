@@ -34,18 +34,16 @@ if ($_POST) {
 
     //QUERY atualiza dados na tabela tbusuarios e tbnivel
     $query_usuario = " UPDATE tbusuarios SET id_nivel_usuario = :id_nivel_usuario, nome_usuario = :nome_usuario, email_usuario = :email_usuario, 
-    login_usuario = :login_usuario, senha_usuario = :senha_usuario, foto_usuario = :foto_usuario
+    login_usuario = :login_usuario, foto_usuario = :foto_usuario
     WHERE id_usuario = :id_usuario";
     //Prepara a query e atribui a váriavel $cad_usuario
-    $edit_usuario = $conn->prepare($query_usuario);  
+    $edit_usuario = $conn->prepare($query_usuario);
 
-    $hash = password_hash($dados['senha_usuario'], PASSWORD_DEFAULT);
     //substitui o link pelos valores armazenados na variável $dados
     $edit_usuario->bindParam(':id_nivel_usuario', $dados['id_nivel_usuario'], PDO::PARAM_INT);
     $edit_usuario->bindParam(':nome_usuario', $dados['nome_usuario'], PDO::PARAM_STR);
     $edit_usuario->bindParam(':email_usuario', $dados['email_usuario'], PDO::PARAM_STR);
     $edit_usuario->bindParam(':login_usuario', $dados['login_usuario'], PDO::PARAM_STR);
-    $edit_usuario->bindParam(':senha_usuario', $hash, PDO::PARAM_STR);
     $edit_usuario->bindParam(':foto_usuario', $novoNomeImgExtensao, PDO::PARAM_STR);
     $edit_usuario->bindParam(':id_usuario', $id_filtro, PDO::PARAM_INT);
 
@@ -100,7 +98,7 @@ $row_nivel = $result_nivel->fetch(PDO::FETCH_ASSOC);
     <!-- Inicio main -->
     <main class="contaimer">
 
-        <div class="container bg-warning p-4 rounded my-2">
+        <div class="container alert alert-primary p-4 rounded my-2">
             <a href="listar_usuarios.php" class="text-decoration-none">
                 <h1 class="text-dark">
                     <i class="bi bi-arrow-left-square-fill"></i>
@@ -141,10 +139,6 @@ $row_nivel = $result_nivel->fetch(PDO::FETCH_ASSOC);
                     <!-- input login_usuario -->
                     <label class="h5 mt-2" for="login_usuario">Login:</label>
                     <input class="form-control" type="text" id="login_usuario" name="login_usuario" value="<?php echo $row_busca['login_usuario'];?>">
-
-                    <!-- input senha_usuario -->
-                    <label class="h5 mt-2" for="senha_usuario">Senha:</label>
-                    <input class="form-control" type="password" id="senha_usuario" name="senha_usuario" placeholder="Digite a sua senha" require>
 
                     <!-- input senha_usuario -->
                     <label class="h5 mt-2" for="foto_usuario">Foto:</label>

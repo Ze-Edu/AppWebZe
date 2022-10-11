@@ -99,7 +99,7 @@ $row_nivel = $result_nivel->fetch(PDO::FETCH_ASSOC);
     <!-- Inicio main -->
     <main class="contaimer">
 
-        <div class="container bg-warning p-4 rounded my-2">
+        <div class="container alert alert-success p-4 rounded my-2">
             <a href="listar_usuarios.php" class="text-decoration-none">
                 <h1 class="text-dark">
                     <i class="bi bi-arrow-left-square-fill"></i>

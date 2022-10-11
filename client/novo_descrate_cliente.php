@@ -20,7 +20,7 @@
 
     <main class="contaimer">
 
-        <div class="container bg-success p-4 rounded my-4">
+        <div class="container alert alert-success p-4 rounded my-4">
             <a href="index.php" class="text-decoration-none">
             <h1 class="text-dark">
                 <i class="bi bi-arrow-left-square-fill"></i>

@@ -18,7 +18,7 @@
 
     <main class="contaimer">
 
-        <div class="container bg-primary p-4 rounded my-4">
+        <div class="container alert alert-primary p-4 rounded my-4">
             <a href="index.php" class="text-decoration-none">
             <h1 class="text-dark">
                 <i class="bi bi-arrow-left-square-fill"></i>

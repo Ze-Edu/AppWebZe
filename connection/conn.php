@@ -17,6 +17,7 @@ try {
    // echo "Conexão com o banco de dados realizada com sucesso!";
 }catch(PDOException $err){
     echo "Erro ao tentar connexão com o banco de dados!" . $err->getMessage();
+    die();
 }
 
 ?>

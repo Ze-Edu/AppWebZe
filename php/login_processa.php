@@ -1,4 +1,5 @@
 <?php
+session_start();
 //Inicia conexão com o banco de dados
 include('../connection/conn.php');
 
@@ -6,8 +7,8 @@ include('../connection/conn.php');
 if ($_POST) {
 
     // verifica login e senha recebidos
-    $login_usuario = $_POST['login'];
-    $senha_usuario = $_POST['senha'];
+    $login_usuario = addslashes($_POST['login']);
+    $senha_usuario = addslashes($_POST['senha']);
 
 
     $verificaUser = "SELECT * FROM tbusuarios WHERE login_usuario = '$login_usuario'";

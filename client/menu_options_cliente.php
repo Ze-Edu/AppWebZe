@@ -28,7 +28,7 @@
             <div class="alert bg-warning bg-opacity-75 "><h4>Chamados</h4></div>
 
             <div class="">
-              <a href="chamados/novo_chamado_cliente.php"><button type="button" class="btn btn-info">Novo Chamado</button></a> 
+              <a href="novo_chamado_cliente.php"><button type="button" class="btn btn-info">Novo Chamado</button></a> 
               <a href="lista_chamado_cliente.php"><button type="button" class="btn btn-info">Meus Chamados</button></a>             
             </div>
           </div>          

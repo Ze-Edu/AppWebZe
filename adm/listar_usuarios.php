@@ -72,6 +72,11 @@
                     </tr>
                 </thead>
                 <!-- Fim do cabeçalho da tabela -->
+                <?php if ($row == 0) {
+                    echo "<div class='alert alert-danger mt-5 p-2 rounded' role='alert'>
+                    <h1><span><i class='bi bi-emoji-frown'></i> Não existe usuário cadastrado!!</span></h1>
+                </div>";
+                }else {?>
                 <!-- Início corpo da tabela -->
                 <tbody>
                     <!-- Abri estrutura de repetição -->
@@ -139,7 +144,7 @@
                         </tr>
                 </tbody>
                 <!-- Fim corpo da tabela -->
-            <?php  } while ($row = $result_usuarios->fetch(PDO::FETCH_ASSOC)); ?>
+            <?php  } while ($row = $result_usuarios->fetch(PDO::FETCH_ASSOC));} ?>
             </table>
             <!-- Fim da tabela -->
         </main>
