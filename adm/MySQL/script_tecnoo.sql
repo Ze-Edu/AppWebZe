@@ -173,3 +173,20 @@ values (`:protocolo`, `:descricao`, `:titulo`, `:id_cliente`, `:data_abertura`,`
 select * from tbchamados where id_chamado = (select @@identity);
 END
 |
+
+-- Procedure nivel
+
+delimiter |
+CREATE PROCEDURE `sp_nivel_insert`
+( `:nome` varchar(20))
+
+BEGIN
+insert into tbnivel (nome_nivel) values (`:nome`);
+
+select * from tbnivel where id_nivel = (select @@identity);
+END
+|
+
+
+
+
