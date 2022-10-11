@@ -43,3 +43,12 @@
 .largButton{
   width: 150px;     
 }
+
+.backgv-social{
+  background-image:  url('../img/img-fundo-donate.png');
+  background-size: contain;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
