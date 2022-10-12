@@ -18,6 +18,7 @@ include('../php/config_global.php');
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <!-- import my CSS -->
   <link rel="stylesheet" href="../css/my_style.css" />
+  <link rel="icon" type="image/x-icon" href="../img/favicon-32x32.png">
   <title><?php echo TECNOO; ?>&nbsp; Área do Cliente</title>
 </head>
 

@@ -11,13 +11,13 @@
 </head>
 
 <body>
-    <main class="container pt-5">
+    <main class="container">
         
-        <div class="alert alert-success text-center mt-5 p-2 rounded" role="alert">
+        <div class="alert alert-success text-center rounded" role="alert">
             <h1 class="">Área administrativa</h1>
         </div>
         <!-- Inicio row -->
-        <div class="row">
+        <div class="row my-5">
             <!-- Inicio botão Principal chamados -->
             <div class="alert bg-warning text-center bg-opacity-75 col-3">
                 <img clas="mb-2" src="../img/administrative_tools_15497.png" alt="">                
