@@ -129,7 +129,7 @@ include('connection/conn.php');
             </p>
           </div>
           <div class="row">
-          <a href="http://" type="button" class="btn btn-outline-dark col col me-1">Eu Quero!</a>
+            <a href="http://" type="button" class="btn btn-outline-dark col col me-1">Eu Quero!</a>
             <button type="button" class="btn btn-outline-dark col col ms-1" data-bs-placement="top" data-bs-toggle="popover" data-bs-title="Associado Prata" data-bs-content="Seja um associado prata e tenha: Atendimento remoto ilimitado e mais 5 visitas gratis.">Saiba Mais...</button>
           </div>
         </div>
@@ -146,8 +146,8 @@ include('connection/conn.php');
             </p>
           </div>
           <div class="row">
-          <a href="http://" type="button" class="btn btn-outline-dark col me-1">Eu Quero!</a>
-           <button type="button" class="btn btn-outline-dark col ms-1" data-bs-placement="top" data-bs-toggle="popover" data-bs-title="Associado Ouro" data-bs-content="Seja um associado ouro e tenha: Atendimento remoto ilimitado e mais 10 visitas gratis e 20% Off.">Saiba Mais...</button>
+            <a href="http://" type="button" class="btn btn-outline-dark col me-1">Eu Quero!</a>
+            <button type="button" class="btn btn-outline-dark col ms-1" data-bs-placement="top" data-bs-toggle="popover" data-bs-title="Associado Ouro" data-bs-content="Seja um associado ouro e tenha: Atendimento remoto ilimitado e mais 10 visitas gratis e 20% Off.">Saiba Mais...</button>
           </div>
         </div>
         <!-- Fim botão ouro -->
@@ -183,7 +183,7 @@ include('connection/conn.php');
       </div>
     </div>
     <!-- Fim Social -->
-    
+
     <!-- Inicio footer -->
     <footer id="contato" class="mt-3">
       <div class="card-footer text-center bg-dark rounded">
@@ -203,8 +203,11 @@ include('connection/conn.php');
               contato@tecnoo.com.br
             </a>
           </address>
-          <div class="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7942870047204!2d-46.458731884693755!3d-23.5399001846936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce66bf22458913%3A0xecdac462b58a9475!2sSenac%20Itaquera!5e0!3m2!1spt-BR!2sbr!4v1660051724396!5m2!1spt-BR!2sbr" id="mapa" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="text-light h1">
+            TecNoo
+            <div class="spinner-border" style="width: 4.5rem; height: 4.5rem;">
+              <i class="bi bi-tools"></i>
+            </div>
           </div>
           <!-- Inicio div contato -->
           <div class="contato">
@@ -288,146 +291,146 @@ include('connection/conn.php');
         <!-- Inicio cadastro -->
         <div class="mx-auto alert bg-light mt-3 bgMain container  border border-light">
           <div class="mx-auto alert bgMain modal-xl">
-              <h1 class="text-light text-center">
-                TecNoo
-                <span><i class="text-center bi bi-tools"></i></span>
-                <!-- Inicio form cadastro -->
-                <form action="php/cadastro_processa.php" method="post" name="form_cadastro" id="form_cadastro" enctype="multipart/form-data" class="form-control container bgMain  border border-light">
-                  <!-- Inicio radio pessoa física-->
-                  <div class="form-check form-check-inline text-light">
-                    <label for="pf" class="form-check-label">
-                      <input class="form-check-input" onclick="esconderCampos()" type="radio" name="pessoa" id="pf" value="Pessoa Física" checked>
-                      <strong>Pessoa Física</strong>
-                    </label>
-                  </div>
-                  <!-- Fim radio pessoa física-->
-                  <!-- Inicio radio pessoa jurídica-->
-                  <div class="form-check form-check-inline text-light">
-                    <label for="pf" class="form-check-label">
-                      <input class="form-check-input" onclick="mostrarCampos()" type="radio" name="pessoa" id="pj" value="Pessoa Jurídica">
-                      <strong>Pessoa Jurídica</strong>
-                    </label>
-                  </div>
-                  <!-- Fim radio pessoa jurídica-->
+            <h1 class="text-light text-center">
+              TecNoo
+              <span><i class="text-center bi bi-tools"></i></span>
+              <!-- Inicio form cadastro -->
+              <form action="php/cadastro_processa.php" method="post" name="form_cadastro" id="form_cadastro" enctype="multipart/form-data" class="form-control container bgMain  border border-light">
+                <!-- Inicio radio pessoa física-->
+                <div class="form-check form-check-inline text-light">
+                  <label for="pf" class="form-check-label">
+                    <input class="form-check-input" onclick="esconderCampos()" type="radio" name="pessoa" id="pf" value="Pessoa Física" checked>
+                    <strong>Pessoa Física</strong>
+                  </label>
+                </div>
+                <!-- Fim radio pessoa física-->
+                <!-- Inicio radio pessoa jurídica-->
+                <div class="form-check form-check-inline text-light">
+                  <label for="pf" class="form-check-label">
+                    <input class="form-check-input" onclick="mostrarCampos()" type="radio" name="pessoa" id="pj" value="Pessoa Jurídica">
+                    <strong>Pessoa Jurídica</strong>
+                  </label>
+                </div>
+                <!-- Fim radio pessoa jurídica-->
 
-                  <div class="row text-start">
-                    <!-- Inicio input nome -->
-                    <div class="col">
-                      <label class="text-light" class="" for="nome"><strong>Nome:</strong></label>
-                      <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome e Sobrenome" required />
-                    </div>
-                    <!-- Fim input nome -->
-                    <!-- Inicio input cpf -->
-                    <div class="col">
-                      <label class="text-light" for="cpf"><strong>CPF:</strong></label>
-                      <input type="text" class="form-control" name="cpf" id="cpf" maxlength="11" placeholder="CPF sem prontos e traços" required />
-                    </div>
-                    <!-- Fim input cpf -->
-                    <!-- Inicio input telefone -->
+                <div class="row text-start">
+                  <!-- Inicio input nome -->
+                  <div class="col">
+                    <label class="text-light" class="" for="nome"><strong>Nome:</strong></label>
+                    <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome e Sobrenome" required />
+                  </div>
+                  <!-- Fim input nome -->
+                  <!-- Inicio input cpf -->
+                  <div class="col">
+                    <label class="text-light" for="cpf"><strong>CPF:</strong></label>
+                    <input type="text" class="form-control" name="cpf" id="cpf" maxlength="11" placeholder="CPF sem prontos e traços" required />
+                  </div>
+                  <!-- Fim input cpf -->
+                  <!-- Inicio input telefone -->
 
-                    <div class="col">
-                      <label class="text-light" for="telefone"><strong>TELEFONE:</strong></label>
-                      <input type="text" class="form-control" name="telefone" id="telefone" maxlength="14" placeholder="99 999999999" required />
-                    </div>
-                    <!-- Fim input telefone -->
+                  <div class="col">
+                    <label class="text-light" for="telefone"><strong>TELEFONE:</strong></label>
+                    <input type="text" class="form-control" name="telefone" id="telefone" maxlength="14" placeholder="99 999999999" required />
                   </div>
+                  <!-- Fim input telefone -->
+                </div>
 
-                  <!-- Inicio div oculta -->
-                  <div id="oculta" class="esconder text-start">
-                    <div class="row">
-                      <!-- Inicio input cnpj -->
-                      <div class="col-md-4">
-                        <label class="text-light" for="cnpj"><strong>CNPJ:</strong></label>
-                        <input type="text" class="form-control" name="cnpj" id="cnpj" maxlength="14" placeholder="CNPJ sem prontos e traços" />
-                      </div>
-                      <!-- Fim input cnpj -->
-                      <!-- Inicio input razão social -->
-                      <div class="col-md-8">
-                        <label class="text-light" for="rsocial"><strong>RAZÃO SOCIAL:</strong></label>
-                        <input type="text" class="form-control" name="rsocial" id="rsocial" placeholder="exemplo Ltda" />
-                      </div>
-                      <!-- Fim input razão social  -->
+                <!-- Inicio div oculta -->
+                <div id="oculta" class="esconder text-start">
+                  <div class="row">
+                    <!-- Inicio input cnpj -->
+                    <div class="col-md-4">
+                      <label class="text-light" for="cnpj"><strong>CNPJ:</strong></label>
+                      <input type="text" class="form-control" name="cnpj" id="cnpj" maxlength="14" placeholder="CNPJ sem prontos e traços" />
                     </div>
+                    <!-- Fim input cnpj -->
+                    <!-- Inicio input razão social -->
+                    <div class="col-md-8">
+                      <label class="text-light" for="rsocial"><strong>RAZÃO SOCIAL:</strong></label>
+                      <input type="text" class="form-control" name="rsocial" id="rsocial" placeholder="exemplo Ltda" />
+                    </div>
+                    <!-- Fim input razão social  -->
                   </div>
-                  <!-- Fim div oculta -->
+                </div>
+                <!-- Fim div oculta -->
 
-                  <!-- Inicio inputs email e senha -->
-                  <div class="row text-start">
-                    <!-- Inicio inputs email -->
-                    <div class="col-sm-8">
-                      <label class="text-light" for="email"><strong>Email</strong></label>
-                      <input type="text" class="form-control" name="email" id="email" placeholder="exemplo@email.com.br" required />
-                    </div>
-                    <!-- Fim input email -->
-                    <!-- Inicio input senha -->
-                    <div class="col-sm-4">
-                      <label class="text-light" for="senha"><strong>Senha</strong></label>
-                      <input type="password" class="form-control" name="senha" id="senha" maxlength="16" required />
-                    </div>
-                    <!-- fim input senha -->
+                <!-- Inicio inputs email e senha -->
+                <div class="row text-start">
+                  <!-- Inicio inputs email -->
+                  <div class="col-sm-8">
+                    <label class="text-light" for="email"><strong>Email</strong></label>
+                    <input type="text" class="form-control" name="email" id="email" placeholder="exemplo@email.com.br" required />
                   </div>
-                  <!-- Fim input email e senha -->
+                  <!-- Fim input email -->
+                  <!-- Inicio input senha -->
+                  <div class="col-sm-4">
+                    <label class="text-light" for="senha"><strong>Senha</strong></label>
+                    <input type="password" class="form-control" name="senha" id="senha" maxlength="16" required />
+                  </div>
+                  <!-- fim input senha -->
+                </div>
+                <!-- Fim input email e senha -->
 
-                  <!-- Inicio inputs cep, logradouro e número -->
-                  <div class="row text-start">
-                    <!-- Inicio inputs cep -->
-                    <div class="col-sm-4">
-                      <label class="text-light" for="cep_endereco"><strong>Cep</strong></label>
-                      <input type="text" class="form-control" name="cep_endereco" id="cep_endereco" placeholder="00000-000" required />
-                    </div>
-                    <!-- Fim input cep -->
-                    <!-- Inicio input Logradouro -->
-                    <div class="col-sm-6">
-                      <label class="text-light" for="logradouro_endereco"><strong>Logradouro</strong></label>
-                      <input type="text" class="form-control" name="logradouro_endereco" id="logradouro_endereco" maxlength="16" required />
-                    </div>
-                    <!-- fim input Logradouro -->
-                    <!-- Inicio input Logradouro -->
-                    <div class="col-sm-2">
-                      <label class="text-light" for="logradouro_endereco"><strong>Numero</strong></label>
-                      <input type="text" class="form-control" name="logradouro_endereco" id="logradouro_endereco" maxlength="16" required />
-                    </div>
-                    <!-- fim input Logradouro -->
+                <!-- Inicio inputs cep, logradouro e número -->
+                <div class="row text-start">
+                  <!-- Inicio inputs cep -->
+                  <div class="col-sm-4">
+                    <label class="text-light" for="cep_endereco"><strong>Cep</strong></label>
+                    <input type="text" class="form-control" name="cep_endereco" id="cep_endereco" placeholder="00000-000" required />
                   </div>
-                  <!-- Fim inputs cep, logradouro e número -->
+                  <!-- Fim input cep -->
+                  <!-- Inicio input Logradouro -->
+                  <div class="col-sm-6">
+                    <label class="text-light" for="logradouro_endereco"><strong>Logradouro</strong></label>
+                    <input type="text" class="form-control" name="logradouro_endereco" id="logradouro_endereco" maxlength="16" required />
+                  </div>
+                  <!-- fim input Logradouro -->
+                  <!-- Inicio input Logradouro -->
+                  <div class="col-sm-2">
+                    <label class="text-light" for="logradouro_endereco"><strong>Numero</strong></label>
+                    <input type="text" class="form-control" name="logradouro_endereco" id="logradouro_endereco" maxlength="16" required />
+                  </div>
+                  <!-- fim input Logradouro -->
+                </div>
+                <!-- Fim inputs cep, logradouro e número -->
 
-                  <!-- Inicio inputs complemento, bairo, cidade e estado -->
-                  <div class="row text-start">
-                    <!-- Inicio inputs complemento -->
-                    <div class="col-sm-2">
-                      <label class="text-light" for="complemento_endereco"><strong>Complemento</strong></label>
-                      <input type="text" class="form-control" name="complemento_endereco" id="complemento_endereco" placeholder="ex: Casa 01" />
-                    </div>
-                    <!-- Fim input complemento -->
-                    <!-- Inicio input bairro -->
-                    <div class="col-sm-4">
-                      <label class="text-light" for="bairro_endereco"><strong>Bairro</strong></label>
-                      <input type="text" class="form-control" name="bairro_endereco" id="bairro_endereco" maxlength="20" required />
-                    </div>
-                    <!-- fim input bairro -->
-                    <!-- Inicio input cidade -->
-                    <div class="col-sm-3">
-                      <label class="text-light" for="cidade_endereco"><strong>Cidade</strong></label>
-                      <input type="text" class="form-control" name="cidade_endereco" id="cidade_endereco" maxlength="20" required />
-                    </div>
-                    <!-- fim input cidade -->
-                    <!-- Inicio input estado -->
-                    <div class="col-sm-3">
-                      <label class="text-light" for="estado_endereco"><strong>Estado</strong></label>
-                      <input type="text" class="form-control" name="estado_endereco" id="estado_endereco" maxlength="20" required />
-                    </div>
-                    <!-- fim input estado -->
+                <!-- Inicio inputs complemento, bairo, cidade e estado -->
+                <div class="row text-start">
+                  <!-- Inicio inputs complemento -->
+                  <div class="col-sm-2">
+                    <label class="text-light" for="complemento_endereco"><strong>Complemento</strong></label>
+                    <input type="text" class="form-control" name="complemento_endereco" id="complemento_endereco" placeholder="ex: Casa 01" />
                   </div>
-                  <!-- Fim inputs complemento, bairo, cidade e estado -->
-                  <!-- Inicio botão cadastrar-->
-                  <div class="d-flex justify-content-center mt-3">
-                    <button type="submit" class="btn btn-info col-sm-6 d-flex justify-content-center " name="cadastrar" id="cadastrar">
-                      Cadastrar
-                    </button>
+                  <!-- Fim input complemento -->
+                  <!-- Inicio input bairro -->
+                  <div class="col-sm-4">
+                    <label class="text-light" for="bairro_endereco"><strong>Bairro</strong></label>
+                    <input type="text" class="form-control" name="bairro_endereco" id="bairro_endereco" maxlength="20" required />
                   </div>
-                  <!-- Fim botão cadastrar -->
-                </form>
-                <!-- Fim form cadastro -->
+                  <!-- fim input bairro -->
+                  <!-- Inicio input cidade -->
+                  <div class="col-sm-3">
+                    <label class="text-light" for="cidade_endereco"><strong>Cidade</strong></label>
+                    <input type="text" class="form-control" name="cidade_endereco" id="cidade_endereco" maxlength="20" required />
+                  </div>
+                  <!-- fim input cidade -->
+                  <!-- Inicio input estado -->
+                  <div class="col-sm-3">
+                    <label class="text-light" for="estado_endereco"><strong>Estado</strong></label>
+                    <input type="text" class="form-control" name="estado_endereco" id="estado_endereco" maxlength="20" required />
+                  </div>
+                  <!-- fim input estado -->
+                </div>
+                <!-- Fim inputs complemento, bairo, cidade e estado -->
+                <!-- Inicio botão cadastrar-->
+                <div class="d-flex justify-content-center mt-3">
+                  <button type="submit" class="btn btn-info col-sm-6 d-flex justify-content-center " name="cadastrar" id="cadastrar">
+                    Cadastrar
+                  </button>
+                </div>
+                <!-- Fim botão cadastrar -->
+              </form>
+              <!-- Fim form cadastro -->
           </div>
         </div>
       </div>
@@ -445,7 +448,7 @@ include('connection/conn.php');
 
   <!-- Script para função mostar_esconder javascript -->
   <script src="js/mostrar_esconder.js"></script>
-  
+
   <!-- Script para função propovers -->
   <script src="js/propovers.js"></script>
 </body>

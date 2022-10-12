@@ -94,7 +94,7 @@ $row_nivel = $result_nivel->fetch(PDO::FETCH_ASSOC);
     <title><?php echo TECNOO; ?>&nbsp; Adicioonar Usuários</title>
 </head>
 
-<body class="fundo">
+<body class="bgMain">
     <!-- Inicio main -->
     <main class="contaimer">
 
@@ -110,7 +110,7 @@ $row_nivel = $result_nivel->fetch(PDO::FETCH_ASSOC);
         <div class="col-md-6 offset-md-3">
             <!-- Início form -->
             <form class="form-control alert alert-success" action="update_usuario.php" method="POST" enctype="multipart/form-data" name="form_update_usuario" id="form_update_usuario">
-                <div class=" form-control form-group  bg-secondary">
+                <div class=" form-control form-group bgMain text-light">
 
                     <!--Inserir o campo id_usuario oculto para uso no filtro -->
                     <input type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $row_busca['id_usuario'];?>">
@@ -152,6 +152,7 @@ $row_nivel = $result_nivel->fetch(PDO::FETCH_ASSOC);
             <!-- Fim form -->
         </div>
         <!-- Início div principal -->
+        <?php include('footer_adm.php');?>
     </main>
     <!-- Fim main -->
 

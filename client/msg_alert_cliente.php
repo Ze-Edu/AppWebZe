@@ -22,7 +22,8 @@ include('../php/config_global.php');
         <link rel="stylesheet" href="../css/my_style.css" />
         <title><?php echo TECNOO; ?>&nbsp; Sucesso</title>
 </head>
-<body>
+<body class="bgMain">
+    <?php include('menu_cliente.php');?>
 
 <main class="container pt-5">
 
@@ -39,6 +40,11 @@ include('../php/config_global.php');
                 </h1>
             </div>
 </main>
+
+<footer class=" container pt-5 my-5">
+        <div class=" pt-5 my-5">
+        <?php include('footer_cliente.php'); ?>
+        </div>
     
 
  <!-- Link arquivos Bootstrap js -->

@@ -43,7 +43,7 @@
         <title><?php echo TECNOO; ?>&nbsp; Listar Usuários</title>
     </head>
 
-    <body>
+    <body class="bgMain">
         <?php include('menu_adm.php'); ?>
 
         <main class="container pt-5">
@@ -147,6 +147,9 @@
             <?php  } while ($row = $result_usuarios->fetch(PDO::FETCH_ASSOC));} ?>
             </table>
             <!-- Fim da tabela -->
+
+            
+        <?php include('footer_adm.php');?>
         </main>
 
         <!-- Início Modal -->
