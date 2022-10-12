@@ -1,13 +1,9 @@
 
 /* Background */
-.backgv {  
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
+.bgMain {  
+  background-image: linear-gradient(#11243a, #402e58);
+  background-repeat: no-repeat;
+  background-size: cover;
   }
 
   /* mapa footer */
@@ -47,8 +43,6 @@
 .backgv-social{
   background-image:  url('../img/img-fundo-donate.png');
   background-size: contain;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
+  background-position-x: center;
+  background-repeat: repeat-x;
 }
