@@ -41,10 +41,11 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
         <!-- import my CSS -->
         <link rel="stylesheet" href="../css/my_style.css" />
+        <link rel="icon" type="image/x-icon" href="../img/favicon-32x32.png">
         <title><?php echo TECNOO; ?>&nbsp; Listar Chamados</title>
     </head>
 
-    <body>
+    <body class="bgMain">
         
 
         <main class="container pt-5">
@@ -158,6 +159,13 @@
             <?php  } while ($row = $result_chamados->fetch(PDO::FETCH_ASSOC));} ?>
             </table>
             <!-- Fim da tabela -->
+
+            <footer class=" container pt-5 my-5">
+        <div class=" pt-5 my-5">
+            <?php include('footer_cliente.php'); ?>
+        </div>
+    </footer>
+
         </main>
 
         <!-- Início Modal -->

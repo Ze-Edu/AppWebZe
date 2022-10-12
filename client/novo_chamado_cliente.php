@@ -126,7 +126,7 @@ if ($_POST) {
     <title><?php echo TECNOO; ?>&nbsp; Novo chamado</title>
 </head>
 
-<body>
+<body class="bgMain">
 
     <main class="contaimer">
 
@@ -196,6 +196,12 @@ if ($_POST) {
                 </div>
             </form>
         </div>
+
+        <footer class=" container pt-5 my-5">
+        <div class=" pt-5 my-5">
+            <?php include('footer_cliente.php'); ?>
+        </div>
+    </footer>
 
     </main>
 

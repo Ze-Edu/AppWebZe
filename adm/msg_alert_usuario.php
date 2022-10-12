@@ -49,7 +49,6 @@ include('../php/config_global.php');
         <div class=" pt-5 my-5">
             <?php include('footer_adm.php'); ?>
         </div>
-
     </footer>
 
 

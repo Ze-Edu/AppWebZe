@@ -22,11 +22,12 @@ include('../php/config_global.php');
   <title><?php echo TECNOO; ?>&nbsp; Área do Cliente</title>
 </head>
 
-<body>
+<body class="bgMain">
 
   <?php
   include('menu_cliente.php');
   include('menu_options_cliente.php');
+  include('footer_cliente.php');
   ?>
 
 </body>
