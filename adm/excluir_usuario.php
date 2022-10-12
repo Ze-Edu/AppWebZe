@@ -5,14 +5,15 @@ include('../connection/conn.php');
 //Inclui variável de ambiente
 include('../php/config_global.php');
 
-//captura o ID que veio na requisição do modal
-$id_user = filter_input(INPUT_GET, "id_usuario", FILTER_SANITIZE_NUMBER_INT);
+//captura o ID que veio na url e atribui a variável $id_user
+$id_user = filter_input(INPUT_GET, 'id_usuario', FILTER_SANITIZE_NUMBER_INT);
 
 //QUERY para deletar usuários com força bruta tei tei
 $query_usuarios = "DELETE FROM tbusuarios WHERE id_usuario = :id";
 $del_usuarios = $conn->prepare($query_usuarios);
 $del_usuarios->bindParam(':id', $id_user, PDO::PARAM_INT);
 
+//Verifica se s query foi executada e o usuário excluido;
 if($del_usuarios->execute()){
     header("location: msg_alert_usuario.php");
     //Cria variável global para salvar a menssagem de sucesso
