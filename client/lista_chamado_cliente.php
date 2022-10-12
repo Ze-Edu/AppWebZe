@@ -46,6 +46,7 @@
     </head>
 
     <body class="bgMain">
+        <?php include('menu_cliente.php');?>
         
 
         <main class="container pt-5">
