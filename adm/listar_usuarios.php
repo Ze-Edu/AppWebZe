@@ -76,80 +76,82 @@
                     echo "<div class='alert alert-danger mt-5 p-2 rounded' role='alert'>
                     <h1><span><i class='bi bi-emoji-frown'></i> Não existe usuário cadastrado!!</span></h1>
                 </div>";
-                }else {?>
-                <!-- Início corpo da tabela -->
-                <tbody>
-                    <!-- Abri estrutura de repetição -->
-                    <?php do { ?>
-                        <tr>
-                            <!-- Início foto -->
-                            <td>
-                                <img src="../img/fotos_usuarios/<?php echo $row['foto_usuario']; ?>" alt="" width="100px">
-                            </td>
-                            <!-- Fim foto -->
-                            <!-- Início ID -->
-                            <td>
-                                <?php echo $row['id_usuario']; ?>
-                            </td>
-                            <!-- Fim ID -->
-                            <!-- Início Nome -->
-                            <td>
-                                <?php echo $row['nome_usuario']; ?>
-                            </td>
-                            <!-- Fim Nome -->
-                            <!-- Início E-mail -->
-                            <td>
-                                <?php echo $row['email_usuario']; ?>
-                            </td>
-                            <!-- Fim E-mail -->
-                            <!-- Início Login -->
-                            <td>
-                                <?php echo $row['login_usuario']; ?>
-                            </td>
-                            <!-- Fim Login -->
-                            <!-- Início Nível -->
-                            <td>
-                                <?php 
-                                if ($row['nome_nivel'] == 'Supervisor') {
-                                    echo ("<span><i class='bi bi-briefcase-fill'></i></span>");
-
-                                }else if($row['nome_nivel'] == 'Tecnico I'){
-                                    echo ("<span><i class='bi bi-headset'></i></span>");
-
-                                }else if($row['nome_nivel'] == 'Tecnico II'){
-                                    echo ("<span><i class='bi bi-screwdriver'></i></span>");
-                                }else{
-                                    echo ("<span><i class='text-danger bi bi-person-x-fill'></i></span>");
-                                }
-                                ?>
-                                <?php echo $row['nome_nivel']; ?>
-                            </td>
-                            <!-- Início Nível -->
-                            <!-- Início Botões -->
-                            <td>
-                                <!-- Início botão alterar -->
-                                <a href="update_usuario.php?id_usuario=<?php echo $row['id_usuario']; ?>" class="btn largButton btn-warning btn mt-2">
-                                    <span><i class="bi bi-pencil-square"></i>Alterar</span>
-                                </a>
-                                <!-- Fim botão alterar -->
-                                <!-- Início botão excluir -->
-                                <button class="btn btn-danger largButton delete mt-2" role="button" data-nome="<?php echo $row['nome_usuario']; ?>" data-id="<?php echo $row['id_usuario']; ?>" data-bs-toggle="modal" data-bs-target="#myModal">
-                                    <span class=""><i class="bi bi-trash-fill"></i>Excluir</span>
+                } else { ?>
+                    <!-- Início corpo da tabela -->
+                    <tbody>
+                        <!-- Abri estrutura de repetição -->
+                        <?php do { ?>
+                            <tr>
+                                <!-- Início foto -->
+                                <td>
+                                    <img src="../img/fotos_usuarios/<?php echo $row['foto_usuario']; ?>" alt="" width="100px">
+                                </td>
+                                <!-- Fim foto -->
+                                <!-- Início ID -->
+                                <td>
+                                    <?php echo $row['id_usuario']; ?>
+                                </td>
+                                <!-- Fim ID -->
+                                <!-- Início Nome -->
+                                <td>
+                                    <?php echo $row['nome_usuario']; ?>
+                                </td>
+                                <!-- Fim Nome -->
+                                <!-- Início E-mail -->
+                                <td>
+                                    <?php echo $row['email_usuario']; ?>
+                                </td>
+                                <!-- Fim E-mail -->
+                                <!-- Início Login -->
+                                <td>
+                                    <?php echo $row['login_usuario']; ?>
+                                </td>
+                                <!-- Fim Login -->
+                                <!-- Início Nível -->
+                                <td>
+                                    <?php
+                                    if ($row['nome_nivel'] == 'Supervisor') {
+                                        echo ("<span><i class='bi bi-briefcase-fill'></i></span>");
+                                    } else if ($row['nome_nivel'] == 'Tecnico I') {
+                                        echo ("<span><i class='bi bi-headset'></i></span>");
+                                    } else if ($row['nome_nivel'] == 'Tecnico II') {
+                                        echo ("<span><i class='bi bi-screwdriver'></i></span>");
+                                    } else {
+                                        echo ("<span><i class='text-danger bi bi-person-x-fill'></i></span>");
+                                    }
+                                    ?>
+                                    <?php echo $row['nome_nivel']; ?>
+                                </td>
+                                <!-- Início Nível -->
+                                <!-- Início Botões -->
+                                <td>
+                                    <!-- Início botão alterar -->
+                                    <a href="update_usuario.php?id_usuario=<?php echo $row['id_usuario']; ?>" class="btn largButton btn-warning btn mt-2">
+                                        <span><i class="bi bi-pencil-square"></i>Alterar</span>
+                                    </a>
+                                    <!-- Fim botão alterar -->
+                                    <!-- Início botão excluir -->
+                                    <button class="btn btn-danger largButton delete mt-2" role="button" data-nome="<?php echo $row['nome_usuario']; ?>" data-id="<?php echo $row['id_usuario']; ?>" data-bs-toggle="modal" data-bs-target="#myModal">
+                                        <span class=""><i class="bi bi-trash-fill"></i>Excluir</span>
 
 
-                                </button>
-                                <!-- Fim botão excluir -->
-                            </td>
-                            <!-- Fim Botões -->
-                        </tr>
-                </tbody>
-                <!-- Fim corpo da tabela -->
-            <?php  } while ($row = $result_usuarios->fetch(PDO::FETCH_ASSOC));} ?>
+                                    </button>
+                                    <!-- Fim botão excluir -->
+                                </td>
+                                <!-- Fim Botões -->
+                            </tr>
+                    </tbody>
+                    <!-- Fim corpo da tabela -->
+            <?php  } while ($row = $result_usuarios->fetch(PDO::FETCH_ASSOC));
+                    } ?>
             </table>
             <!-- Fim da tabela -->
 
-            
-        <?php include('footer_adm.php');?>
+
+            <footer class=" container pt-5 my-5">
+                <div class=" pt-5 my-5">
+                    <?php include('footer_adm.php'); ?>
+                </div>
         </main>
 
         <!-- Início Modal -->
@@ -192,7 +194,7 @@
                 //Insere o nome do item na confirmação do modal
                 $('span.nome').text(nome);
                 //Envia o id através do link do butão confirmar
-                $('a.delete-yes').attr('href', 'excluir_usuario.php?id_usuario='+id);
+                $('a.delete-yes').attr('href', 'excluir_usuario.php?id_usuario=' + id);
                 console.log(id);
                 //Abre o Modal
                 $('#myModal').modal('show');
