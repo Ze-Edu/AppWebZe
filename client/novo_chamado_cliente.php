@@ -81,10 +81,9 @@ if ($_POST) {
     $cad_chamados->bindParam(':id_cliente_chamado', $id_logado, PDO::PARAM_INT);
     $cad_chamados->bindParam(':data_limite_chamado', $data_limite, PDO::PARAM_STR);
     $cad_chamados->bindParam(':status_chamado', $status, PDO::PARAM_STR);
+         
 
-    $cad_chamados->execute();
-
-    if ($conn->lastInsertId()) {
+    if ($cad_chamados->execute()) {
         header("location: msg_alert_cliente.php");
         //Cria variável global para salvar a menssagem de sucesso
         $_SESSION['msg'] = "<p style='color:green;'>Tudo Certo!!<br>Chamado cadastrado com sucesso!</P> ";

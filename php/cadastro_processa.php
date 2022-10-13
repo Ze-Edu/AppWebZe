@@ -39,6 +39,27 @@ try {
     $cad_cliente->bindParam(':senha_cliente', $hash, PDO::PARAM_STR);
     //executa a query
     $cad_cliente->execute();
+
+    $id_cliente = $conn->lastInsertId();
+
+    //QUERY para inserir dados na tabela tbendereco
+    $query_endereco = "INSERT INTO tbendereco (id_cliente_endereco, cep_endereco, logradouro_endereco, num_endereco, 
+    complemento_endereco, bairro_endereco, cidade_endereco, estado_endereco) 
+    VALUES(:id_cliente_endereco, :cep_endereco, :logradouro_endereco, :num_endereco, :complemento_endereco, :bairro_endereco, :cidade_endereco, :estado_endereco)";
+    $cad_endereco = $conn->prepare($query_endereco);
+
+    //substitui o link pelos valores armazenados na variável $dados
+    $cad_endereco->bindParam(':id_cliente_endereco', $id_cliente, PDO::PARAM_INT);
+    $cad_endereco->bindParam(':cep_endereco', $dados['cep_endereco'], PDO::PARAM_STR);
+    $cad_endereco->bindParam(':logradouro_endereco', $dados['logradouro_endereco'], PDO::PARAM_STR);
+    $cad_endereco->bindParam(':num_endereco', $dados['num_endereco'], PDO::PARAM_STR);
+    $cad_endereco->bindParam(':complemento_endereco', $dados['complemento_endereco'], PDO::PARAM_STR);
+    $cad_endereco->bindParam(':bairro_endereco', $dados['bairro_endereco'], PDO::PARAM_STR);
+    $cad_endereco->bindParam(':cidade_endereco', $dados['cidade_endereco'], PDO::PARAM_STR);
+    $cad_endereco->bindParam(':estado_endereco', $dados['estado_endereco'], PDO::PARAM_STR);
+
+    $cad_endereco->execute();
+
     //Cria variável global para salvar a menssagem de sucesso
     $_SESSION['msg'] = "<p style='color:green;'>Usuário cadastrado com sucesso!<br>Use o seu e-mail e senha para efetuar login</P> ";
 } catch (Exception) {

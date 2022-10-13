@@ -387,8 +387,8 @@ include('connection/conn.php');
                   <!-- fim input Logradouro -->
                   <!-- Inicio input Logradouro -->
                   <div class="col-sm-2">
-                    <label class="text-light" for="logradouro_endereco"><strong>Numero</strong></label>
-                    <input type="text" class="form-control" name="logradouro_endereco" id="logradouro_endereco" maxlength="16" required />
+                    <label class="text-light" for="num_endereco"><strong>Numero</strong></label>
+                    <input type="text" class="form-control" name="num_endereco" id="num_endereco" maxlength="16" required />
                   </div>
                   <!-- fim input Logradouro -->
                 </div>
