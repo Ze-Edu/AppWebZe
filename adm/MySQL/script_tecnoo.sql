@@ -1,5 +1,5 @@
 -- create database tecnoodb; 
--- use tecnoodb;
+ -- use tecnoodb;
 
 -- estrutura da tabela usuario
 
@@ -84,11 +84,27 @@ data_abertura_chamado datetime default current_timestamp,
 data_finalizacao_chamado datetime null,
 data_limite_chamado date,
 foto_erro_chamado varchar(60) null,
-status_chamado varchar(20) null,
+status_chamado varchar(100) null,
 prioridade_chamado varchar(20) null,
 local_atend_chamado varchar(30) null
 
 )engine = innoDB default charset = UTF8;
+
+create table tbdescarte(
+id_descarte int(11) not null primary key auto_increment,
+protocolo_descarte varchar(255) not null,
+descri_descarte varchar(255) not null,
+nome_hard_chamado varchar(32) not null,
+id_cliente_descarte int(11) not null,
+data_abertura_descarte datetime default current_timestamp,
+data_retirada_descarte datetime null,
+prazo_retirada_descarte date,
+foto_hard_descarte varchar(60) null,
+status_descarte varchar(100) null
+
+)engine = innoDB default charset = UTF8;
+
+
 
 CREATE TABLE IF NOT EXISTS `tecnoodb`.`hist_atend` (
 	`id_hist_atend` INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -127,11 +143,20 @@ references tbchamados (id_chamado);
 alter table hist_atend add constraint fk_id_usuario foreign key (id_usuario_hist_atend)
 references tbusuarios (id_usuario);
 
+-- restrição (constraint) da tabela descarte
+alter table tbdescarte add constraint fk_cliente_descarte foreign key (id_cliente_descarte)
+references tbcliente (id_cliente) on delete no action on update no action;
+
+select * from tbusuarios;
+select * from tbchamados;
+select * from tbcliente;
+select * from tbdescarte;
 
 
-------PROCEDURES--------
 
---PROCEDURE ADD CLIENTE
+-- PROCEDURES --
+
+-- PROCEDURE ADD CLIENTE
 delimiter |
 CREATE PROCEDURE `sp_cliente_insert`
 ( `:nome` varchar(60), `:cpf_cliente` varchar(11), `:telefone_cliente` varchar(14), `:cnpj_cliente` varchar(14), `:razao_social_cliente` varchar(30), `:id_tipo` int(11), `:email_cliente` varchar(32), `:senha_cliente` varchar(255) )
@@ -143,7 +168,7 @@ select * from tbcliente where id_cliente = (select @@identity);
 END
 |
 
---PROCEDURE ADD USUARIO
+-- PROCEDURE ADD USUARIO
 delimiter |
 CREATE PROCEDURE `sp_user_insert`( `:nome` varchar(30), `:email` varchar(32), `:id_nivel` int(11), `:login` varchar(30), `:senha` varchar(255), `:foto` varchar(60))
 BEGIN
@@ -153,7 +178,7 @@ select * from tbusuarios where id_usuario= (select @@identity);
 END
 |
 
---PROCEDURE ADD CHAMADO
+-- PROCEDURE ADD CHAMADO
 delimiter |
 CREATE PROCEDURE `sp_chamado_insert`(
 `:protocolo` varchar(255),
