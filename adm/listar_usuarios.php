@@ -44,7 +44,7 @@
         <title><?php echo TECNOO; ?>&nbsp; Listar Usuários</title>
     </head>
 
-    <body class="bgMain">
+    <body class="bgMain-interno">
         <?php include('menu_adm.php'); ?>
 
         <main class="container pt-5">

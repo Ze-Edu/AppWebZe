@@ -125,12 +125,12 @@ include('connection/conn.php');
           </div>
           <div class="alert bg-dark text-light">
             <p>
-            <h5>Suporte 24Hrs por telefone/app e web + suporte presencial limitado</h5>
+            <h5>Suporte 24Hrs por telefone/app e web + suporte presencial limitado + 10% Off</h5>
             </p>
           </div>
           <div class="row">
-            <a href="http://" type="button" class="btn btn-outline-dark col col me-1">Eu Quero!</a>
-            <button type="button" class="btn btn-outline-dark col col ms-1" data-bs-placement="top" data-bs-toggle="popover" data-bs-title="Associado Prata" data-bs-content="Seja um associado prata e tenha: Atendimento remoto ilimitado e mais 5 visitas gratis.">Saiba Mais...</button>
+            <a href="#" type="button" class="btn btn-outline-dark col col me-1" data-bs-toggle="modal" data-bs-target="#login">Eu Quero!</a>
+            <button type="button" class="btn btn-outline-dark col col ms-1" data-bs-placement="top" data-bs-toggle="popover" data-bs-title="Associado Prata" data-bs-content="Seja um associado prata e tenha: Atendimento remoto ilimitado e mais 5 visitas gratis + 10% Off.">Saiba Mais...</button>
           </div>
         </div>
         <!-- Fim botão prata -->
@@ -146,7 +146,7 @@ include('connection/conn.php');
             </p>
           </div>
           <div class="row">
-            <a href="http://" type="button" class="btn btn-outline-dark col me-1">Eu Quero!</a>
+            <a href="#" type="button" class="btn btn-outline-dark col me-1" data-bs-toggle="modal" data-bs-target="#login">Eu Quero!</a>
             <button type="button" class="btn btn-outline-dark col ms-1" data-bs-placement="top" data-bs-toggle="popover" data-bs-title="Associado Ouro" data-bs-content="Seja um associado ouro e tenha: Atendimento remoto ilimitado e mais 10 visitas gratis e 20% Off.">Saiba Mais...</button>
           </div>
         </div>
@@ -163,7 +163,7 @@ include('connection/conn.php');
             </p>
           </div>
           <div class="row">
-            <a href="http://" type="button" class="btn btn-outline-dark col me-1">Eu Quero!</a>
+            <a href="#" type="button" class="btn btn-outline-dark col me-1" data-bs-toggle="modal" data-bs-target="#login">Eu Quero!</a>
             <button type="button" class="btn btn-outline-dark col ms-1" data-bs-placement="top" data-bs-toggle="popover" data-bs-title="Associado Diamante" data-bs-content="Seja um associado ouro e tenha: Atendimento remoto ilimitado e mais 15 visitas gratis e mão de obra grátis.">Saiba Mais...</button>
           </div>
         </div>

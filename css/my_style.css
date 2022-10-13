@@ -6,6 +6,13 @@
   background-size: cover;
   }
 
+  .bgMain-interno {  
+    background-image: linear-gradient(#11243a, #402e58);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    }
+
   /* mapa footer */
   .mapa{
     display: flex;    

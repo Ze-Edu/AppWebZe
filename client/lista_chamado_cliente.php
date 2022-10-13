@@ -92,7 +92,7 @@
                         <tr>
                             <!-- Início foto -->
                             <td>
-                                <img src="../img/foto_chamado_cliente/<?php echo $row['foto_erro_chamado']; ?>" alt="" width="100px">
+                                <img src="../img/foto_chamado_cliente/<?php echo $row['foto_erro_chamado'];?>" alt="" width="100px">
                             </td>
                             <!-- Fim foto -->
                             <!-- Início ID -->

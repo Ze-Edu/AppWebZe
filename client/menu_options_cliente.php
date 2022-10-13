@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="css/my_style.css" />
     <title>Tecnoo</title>
 </head>
-<body>
+<body class="bgMain-interno">
 
-<main class="container pt-5">
+<main class="container pt-5 my-5">
 <div class="alert alert-primary text-center mt-5 p-2 rounded" role="alert">
-      <h1 class="">Minha Área</h1>
+      <h1 class="mb-3">Minha Área</h1>
     </div>
         <!-- Inicio row -->
-        <div class="row">
+        <div class="row ">
           <!-- Inicio botão Principal chamados -->
           <div class="alert bg-secondary text-center bg-opacity-75 col " >
                 <img src="../img/chamados.png" alt="">
@@ -49,11 +49,11 @@
           <!-- Inicio botão Principal planos -->
           <div class="alert bg-secondary mx-2 text-center bg-opacity-75 col " >
                 <img src="../img/planos.png" alt="">
-            <div class="alert bg-primary bg-opacity-75 "><h4>Planos</h4></div>
+            <div class="alert bg-primary bg-opacity-75 "><h4>Contratos</h4></div>
 
             <div class="">
-              <a href="novo_plano_cliente.php"><button type="button" class="btn btn-info">Novo Plano</button></a> 
-              <a href="meu_plano.php"><button type="button" class="btn btn-info">Meu Plano</button></a>             
+              <a href="novo_contrato_cliente.php"><button type="button" class="btn btn-info">Novo Contrato</button></a> 
+              <a href="meu_contrato.php"><button type="button" class="btn btn-info">Meu Plano</button></a>             
             </div>
           </div>          
           <!-- Fim botão Principal planos  -->

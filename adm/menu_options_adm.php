@@ -25,7 +25,7 @@
                     <h4>Chamados</h4>
                 </div>
                 <div class="">
-                    <a href="#"><button type="button" class="btn btn-light">Lista Chamados</button></a>
+                    <a href="listar_chamados.php"><button type="button" class="btn btn-light">Lista Chamados</button></a>
                 </div>
             </div>
             <!-- Fim botão Principal chamados -->
@@ -36,7 +36,7 @@
                     <h4>Hard Solidário</h4>
                 </div>
                 <div class="">
-                    <a href="#"><button type="button" class="btn btn-light">Lista Descarte</button></a>
+                    <a href="listar_hard.php"><button type="button" class="btn btn-light">Lista Descarte</button></a>
                 </div>
             </div>
             <!-- Fim botão Principal Hardware solidário -->
@@ -47,7 +47,7 @@
                     <h4>Contratos</h4>
                 </div>
                 <div class="">
-                    <a href="#"><button type="button" class="btn btn-light">Lista Contratos</button></a>
+                    <a href="listar_contratos.php"><button type="button" class="btn btn-light">Lista Contratos</button></a>
                 </div>
             </div>
             <!-- Fim botão Principal planos  -->
