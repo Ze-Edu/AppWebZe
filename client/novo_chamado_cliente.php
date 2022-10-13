@@ -125,7 +125,7 @@ if ($_POST) {
     <title><?php echo TECNOO; ?>&nbsp; Novo chamado</title>
 </head>
 
-<body class="bgMain">
+<body class="bgMain-interno">
 
     <main class="contaimer">
 

@@ -268,12 +268,12 @@ include('../php/config_global.php');
                                         <input type="text" class="form-control" name="logradouro_endereco" id="logradouro_endereco" maxlength="16" required />
                                     </div>
                                     <!-- fim input Logradouro -->
-                                    <!-- Inicio input Logradouro -->
+                                    <!-- Inicio input num_endereco -->
                                     <div class="col-sm-2">
                                         <label class="text-light" for="logradouro_endereco"><strong>Numero</strong></label>
-                                        <input type="text" class="form-control" name="logradouro_endereco" id="logradouro_endereco" maxlength="16" required />
+                                        <input type="text" class="form-control" name="num_endereco" id="num_endereco" maxlength="16" required />
                                     </div>
-                                    <!-- fim input Logradouro -->
+                                    <!-- fim input num_endereco -->
                                 </div>
                                 <!-- Fim inputs cep, logradouro e número -->
 

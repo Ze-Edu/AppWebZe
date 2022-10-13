@@ -15,7 +15,7 @@
     <title>Novo Plano</title>
 </head>
 
-<body>
+<body class="bgMain-interno">
 
     <main class="contaimer">
 
