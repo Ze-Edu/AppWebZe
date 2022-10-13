@@ -15,6 +15,7 @@ include('connection/conn.php');
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <!-- import my CSS -->
   <link rel="stylesheet" href="css/my_style.css" />
+  <link rel="stylesheet" href="./css/spinner.scss">
   <link rel="icon" type="image/x-icon" href="img/favicon-32x32.png">
   <title>Tecnoo</title>
 </head>
@@ -213,7 +214,7 @@ include('connection/conn.php');
           <div class="contato">
             <a href="#"><i class="bi bi-instagram text-light"></i></a>
 
-            <a href="#"><i class="bi bi-youtube text-danger"></i></a>
+            <a href="https://www.youtube.com/channel/UCg1l0Z8YQ_Qzw9EMIMzWXjw"><i class="bi bi-youtube text-danger"></i></a>
 
             <a href="#"><i class="bi bi-whatsapp text-success"></i></a>
           </div>

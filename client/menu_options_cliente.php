@@ -52,8 +52,7 @@
             <div class="alert bg-primary bg-opacity-75 "><h4>Contratos</h4></div>
 
             <div class="">
-              <a href="novo_contrato_cliente.php"><button type="button" class="btn btn-dark">Novo Contrato</button></a> 
-              <a href="meu_contrato.php"><button type="button" class="btn btn-dark">Tutorial contrato</button></a>             
+              <a href="novo_contrato_cliente.php"><button type="button" class="btn btn-dark">Novo Contrato</button></a>             
             </div>
           </div>          
           <!-- Fim botão Principal planos  -->

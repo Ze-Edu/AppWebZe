@@ -82,9 +82,14 @@
         </div>
         </div>
         <!-- Fim botão ouro -->
+        <span class="btn btn-secondary rounded-5 "> 
+            <a href="https://www.youtube.com/channel/UCg1l0Z8YQ_Qzw9EMIMzWXjw" target="_blanck" style="text-decoration: none; color: black;"><h4>Tutorial contrato</h4></a> 
+        </span>
       </div>
+      
       <!-- Fim row -->
     </div>
+
     <!-- Fim Planos -->
 
     </main>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- import my CSS -->
     <link rel="stylesheet" href="../css/my_style.css" />
+    <link rel="stylesheet" href="../css/spinner.scss">
     <title>Rodapé</title>
 </head>
 
