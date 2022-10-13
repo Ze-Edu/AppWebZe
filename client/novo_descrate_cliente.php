@@ -17,7 +17,7 @@
     <title>Descarte</title>
 </head>
 
-<body class="bg-secondary">
+<body class="bgMain-interno">
 
     <main class="contaimer">
 
