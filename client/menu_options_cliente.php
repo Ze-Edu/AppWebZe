@@ -28,8 +28,8 @@
             <div class="alert bg-warning bg-opacity-75 "><h4>Chamados</h4></div>
 
             <div class="">
-              <a href="novo_chamado_cliente.php"><button type="button" class="btn btn-info">Novo Chamado</button></a> 
-              <a href="lista_chamado_cliente.php"><button type="button" class="btn btn-info">Meus Chamados</button></a>             
+              <a href="novo_chamado_cliente.php"><button type="button" class="btn btn-dark">Novo Chamado</button></a> 
+              <a href="lista_chamado_cliente.php"><button type="button" class="btn btn-dark">Meus Chamados</button></a>             
             </div>
           </div>          
           <!-- Fim botão Principal chamados -->
@@ -40,8 +40,8 @@
             <div class="alert bg-success bg-opacity-75 "><h4>Hardware Solidário</h4></div>
 
             <div class="">
-              <a href="novo_descrate_cliente.php"><button type="button" class="btn btn-info">Novo Descarte</button></a> 
-              <a href="lista_descarte_cliente.php"><button type="button" class="btn btn-info">Meus Descartes</button></a>             
+              <a href="novo_descrate_cliente.php"><button type="button" class="btn btn-dark">Novo Descarte</button></a> 
+              <a href="lista_descarte_cliente.php"><button type="button" class="btn btn-dark">Meus Descartes</button></a>             
             </div>
           </div>          
           <!-- Fim botão Principal Hardware solidário -->
@@ -52,8 +52,8 @@
             <div class="alert bg-primary bg-opacity-75 "><h4>Contratos</h4></div>
 
             <div class="">
-              <a href="novo_contrato_cliente.php"><button type="button" class="btn btn-info">Novo Contrato</button></a> 
-              <a href="meu_contrato.php"><button type="button" class="btn btn-info">Meu Plano</button></a>             
+              <a href="novo_contrato_cliente.php"><button type="button" class="btn btn-dark">Novo Contrato</button></a> 
+              <a href="meu_contrato.php"><button type="button" class="btn btn-dark">Tutorial contrato</button></a>             
             </div>
           </div>          
           <!-- Fim botão Principal planos  -->
