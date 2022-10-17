@@ -36,11 +36,13 @@ include('../php/config_global.php');
         </div>
         <div class="card mt-5 alert bg-warning bg-opacity-60" style="max-width: 100vw;">
             <div class="row g-0">
-                <div class="col-md-8">
-                    <div class="card-body">
+                <div class="">
+                    <div class="card-body text-center">
                         <h1>Contrato Ouro</h1>
                         <br>
-                        <h4>op
+                        <h4>
+                        <strong>Após contratar o plano Ouro você terá Suporte 24Hrs por telefone/app  e 3 visitas técnicas gratuitas por contrato. </strong>
+                        O nosso plano ouro é o plano intermediario da nossa empresa, ja oferecendo ao cliente final ou a empresa um suporte 24hrs e 3 visitas técnicas gratuitas através do nosso contrato.
                         </h4>
                         <a download="" href="../pdfs/Contrato de prestação de serviço Ouro TecNoo.pdf"><button class="align-self-center btn btn-dark mb-3 mt-5">Contratar</button></a>
                     </div>

@@ -34,14 +34,16 @@ include('../php/config_global.php');
                 </h1>
             </a>
         </div>
-        <div class="card mt-5 alert bg-light bg-opacity-75" style="max-width: 100vw;">
+        <div class="card mt-5 alert bg-light bg-opacity-90" style="max-width: 100vw;">
             <div class="row g-0">
                 <div class="">
                     <div class="card-body text-center">
                         <h1>Contrato Prata</h1>
                         <br>
                         <h4>
-                            Após contratar o plano prata você terá acesso a abertura de chamado por telefone/site e app(segunda a sexta-das9:00 ás 18:00).
+                             <strong>Após contratar o plano Prata você terá acesso a abertura de chamado por telefone/site e app(segunda a sexta-das9:00 ás 18:00).</strong> 
+                            Nosso plano prata é um plano de entrada e o plano mais acessivel da nossa empresa, ele e um plano que tem uma quantidade menor de atendimento e de disponibilidade,
+                            mas e um otimo plano para pessoas comuns comprarem.
                         </h4>
                         <a download="" href="../pdfs/Contrato de prestação de serviço Prata TecNoo.pdf"><button class="align-self-center btn btn-dark mb-3 mt-5">Contratar</button></a>
                     </div>
