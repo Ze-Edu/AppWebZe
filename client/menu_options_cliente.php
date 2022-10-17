@@ -22,38 +22,37 @@
         <!-- Inicio row -->
         <div class="row ">
           <!-- Inicio botão Principal chamados -->
-          <div class="alert bg-secondary text-center bg-opacity-75 col " >
+          <div class="alert bg-warning text-center bg-opacity-50 col " >
                 <img src="../img/chamados.png" alt="">
                 <br>
             <div class="alert bg-warning bg-opacity-75 "><h4>Chamados</h4></div>
 
             <div class="">
-              <a href="novo_chamado_cliente.php"><button type="button" class="btn btn-info">Novo Chamado</button></a> 
-              <a href="lista_chamado_cliente.php"><button type="button" class="btn btn-info">Meus Chamados</button></a>             
+              <a href="novo_chamado_cliente.php"><button type="button" class="btn btn-dark">Novo Chamado</button></a> 
+              <a href="lista_chamado_cliente.php"><button type="button" class="btn btn-dark">Meus Chamados</button></a>             
             </div>
           </div>          
           <!-- Fim botão Principal chamados -->
 
            <!-- Inicio botão Principal Hardware solidário -->
-          <div class="alert bg-secondary mx-2 text-center bg-opacity-75 col " >
+          <div class="alert bg-success mx-2 text-center bg-opacity-50 col " >
                 <img src="../img/hardware.png" alt="">
             <div class="alert bg-success bg-opacity-75 "><h4>Hardware Solidário</h4></div>
 
             <div class="">
-              <a href="novo_descrate_cliente.php"><button type="button" class="btn btn-info">Novo Descarte</button></a> 
-              <a href="lista_descarte_cliente.php"><button type="button" class="btn btn-info">Meus Descartes</button></a>             
+              <a href="novo_descrate_cliente.php"><button type="button" class="btn btn-dark">Novo Descarte</button></a> 
+              <a href="lista_descarte_cliente.php"><button type="button" class="btn btn-dark">Meus Descartes</button></a>             
             </div>
           </div>          
           <!-- Fim botão Principal Hardware solidário -->
 
           <!-- Inicio botão Principal planos -->
-          <div class="alert bg-secondary mx-2 text-center bg-opacity-75 col " >
+          <div class="alert bg-info mx-2 text-center bg-opacity-50 col " >
                 <img src="../img/planos.png" alt="">
             <div class="alert bg-primary bg-opacity-75 "><h4>Contratos</h4></div>
 
             <div class="">
-              <a href="novo_contrato_cliente.php"><button type="button" class="btn btn-info">Novo Contrato</button></a> 
-              <a href="meu_contrato.php"><button type="button" class="btn btn-info">Meu Plano</button></a>             
+              <a href="novo_contrato_cliente.php"><button type="button" class="btn btn-dark">Novo Contrato</button></a>              
             </div>
           </div>          
           <!-- Fim botão Principal planos  -->

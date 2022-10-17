@@ -33,7 +33,7 @@ function mudacorDiamante(){
     let btn = document.getElementById("diamante")
   
     btn.classList.remove("bg-light");
-    btn.classList.add("bg-danger");
+    btn.classList.add("bg-info");
   }
   //Volta a cor de fundo da div plano diamante
   function voltaOriginalDiamante(){
